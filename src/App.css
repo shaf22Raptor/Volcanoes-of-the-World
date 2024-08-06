@@ -1,38 +1,303 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+
+/* Simple browser reset */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+/* Icon */
+#icon {
+  display: inline-block;
+  color: #fff;
+  width: 49%;
+}
+
+#icon img {
+  width: 50px;
+  border-radius: 3px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+/* Basic site section */
+.features {
+  padding-bottom: 50px;
+  padding-top: 50px;
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.features_header {
   text-align: center;
+  margin-bottom: 30px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.features_header h2 {
+  font-size: 30px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 300;
+  color: #777;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+body {
+  background: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+ }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+ header {
+  background: #494949;
+  color: #fff;
+  padding: 10px 30px;
+ }
+
+ footer {
+  background: #222;
+  padding: 40px;
+  text-align: center;
+  color: #d8d8d8;
+ }
+ 
+ nav {
+  width: 50%;
+  display: inline-block;
+  text-align: right;                           
+ }
+
+ nav ul {
+  list-style: none;
+  margin: 0;                             
+ }
+
+ nav ul li {
+  display: inline-block;
+  color:#fff;
+ }
+
+ nav ul li button {
+  border: none; 
+  box-shadow: none;
+  background-color: transparent; 
+  padding: 10px 15px;
+  font-size: 16px;
   color: white;
+  cursor: pointer;
+ }
+
+ nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 10px 15px;
+  border-radius: 3px;
+  transition: 0.3s ease all;                                
+ }
+
+ nav ul li a:hover,
+ nav ul li button:hover {
+  background: #444;                    
 }
 
-.App-link {
-  color: #61dafb;
+/*Hero class in home screen*/
+
+.hero {
+  min-height: 800px;
+  text-align: center;
+  background-image: url("../public/img/volcano.jpg");
+  background-size: cover;                      
+ }
+
+ .hero_content {
+  color: #ffffff;
+  padding-top: 25px;                           
+ }
+
+.hero_title {
+  font-size: 100px;
+  margin: 0;
+  font-family: "Merriweather", serif;
+ }
+                                         
+ .hero_subtitle {
+  font-size: 40px;
+  font-style: italic;
+ }
+
+ /*Button links*/
+ .hero_content a {
+  display: inline-block; color: #fff;
+  border: 3px solid #fff;
+  border-radius: 3px;
+  padding: 15px 30px;
+  margin-right: 20px;
+  text-decoration: none;
+  font-size: 28px;
+  transition: transform 1s;
+ }
+ 
+ .hero_content a:hover {
+  background-color: #df6c29;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+ }
+
+
+ /*Bottom page elements - feature box used in home screen*/
+ .features_box-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;   
+ }
+
+ .features_box {
+  text-align: center;
+  flex: 1;
+  margin-left: 5px;
+ }
+
+ .features_box img {
+  margin-bottom: 12px;
+  width: 80px;
+ }
+ .features_box h5 {
+  font-size: 20px;
+  color: #999;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin: 0;
+ }
+
+ .container {
+  display: flex;
+  justify-content: center; 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ /* LoginRegister Page */
+ .form {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 400px; /* Adjust based on your design */
+  width: 100%;
 }
+
+.form h1 {
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.form label {
+  font-size:25px;
+  margin-bottom: 10px;
+}
+
+.form input[type="text"],
+.form input[type="password"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.bar-graph button,
+.form button {
+  font-size: large;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+  margin-top: 10px;
+}
+
+.form button[type="submit"] {
+  background-color: #007bff;
+}
+
+.bar-graph button,
+.form button[type="button"] {
+  background-color: #6c757d;
+}
+
+.bar-graph button:hover,
+.form button:hover {
+  opacity: 0.8;
+}
+
+.ag-cell {
+  color: black !important; /* Set text color to black */
+}
+ 
+/* Distance search bar */
+ .ag-theme-balham .ag-root-wrapper {
+  margin-top:20px;
+  background-color: #f9f9f9;
+  color: #000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+ }
+
+.ag-theme-balham {
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+ .ag-theme-balham h1{
+  font-size:48px;
+ }
+
+.volcano-search {
+  width:50%;
+  margin-top: 10px; /* Add margin as needed */
+  margin-bottom: 10px;
+  display:flex;
+}
+
+.country-search,
+.distance-filter {
+  flex: 1; /* Make both search bars flexible */
+  margin-right: 10px; /* Add margin between search bars */
+}
+
+/*Volcano information page */
+.volcano-info {
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  display:flex;
+}
+
+.volcano-data,
+.map {
+  flex:1;
+  margin:10px;
+}
+
+ /* Responsive columns for different devices */
+
+@media (max-width: 700px) {
+  .features_box-wrapper {
+   flex-wrap: wrap;
+  }
+  .features_box {
+   flex: 1 100%;
+  }
+ }
